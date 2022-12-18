@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Lettura dati CSV</title>
+    <script type="text/javascript" src="papaparse.min.js"></script>
+</head>
+
+<body>
+    <input type="file" id="caricaCSV" accept=".csv">
+    <button id="bottoneCarica">Lettura CSV</button> <!-- bottone per fare l'upload di un file csv -->
+    <table id="tbl-data">
+
+    </table>
+    <script type="text/javascript"> // tutte le opzioni sottostanti le ricavo dalla documentazione sul sito papaparse.com
+        let bottone_carica = document.getElementById('bottoneCarica').addEventListener('click', () => {
+            Papa.parse(document.getElementById('caricaCSV').files[0], {
+                download: true, //opzione che scarica il file contenuto come primo argomento della funzione
+                header: false,  //opzione che esclude la prima riga del file csv dal parse
+                complete: function (results) { // opzione che comprende ciò che viene eseguito solo quando il parse è concluso
+                    let i = 0;
+                    results.data.map((data, indice) => {
+                        //console.log(data); visualizza tutti i dati presenti nel csv nella console (utile per capire come fare poi la tabella)
+
+                        if (i === 0) { //se l'indice è 0 crea l'intestazione altrimenti le righe, per questo motivo le righe sono impostate a -1
+                            let tabella = document.getElementById('tbl-data');
+                            creaTabellaHead(tabella, data);
+                        } else {
+                            let tabella = document.getElementById('tbl-data');
+                            creaTabellaRiga(tabella, data);
+                        }
+                        i++;
+                    });
+                }
+            });
+        });
+
+        function creaTabellaHead(tabella, data) { // funzione che crea l'intestazione della tabella
+            let thead = tabella.createTHead();
+            let riga = thead.insertRow();
+            for (let key of data) { //scansiona tutti i dati
+                let th = document.createElement('th');
+                let testo = document.createTextNode(key);
+                th.appendChild(testo); 
+                riga.appendChild(th);
+            }
+        }
+
+        function creaTabellaRiga(tabella, data) { // funzione che crea tutte le righe della tabella
+            let nuovaRiga = tabella.insertRow(-1);
+            data.map((riga, indice) => {
+                let nuovaCella = nuovaRiga.insertCell();
+                let nuovoTesto = document.createTextNode(riga);
+                nuovaCella.appendChild(nuovoTesto); 
+            });
+        }
+    </script>
+</body>
+
+</html>
