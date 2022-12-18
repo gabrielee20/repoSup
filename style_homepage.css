@@ -33,7 +33,7 @@ nav img{
 .nav-links ul li a{
     color: #fff;
     text-decoration: none;
-    font-size: 13px;
+    font-size: 22px;
 }
 /* Per aggiungere una linea quando si passa con il mouse sotto un menu */
 .nav-links ul li::after{
@@ -46,5 +46,35 @@ nav img{
     transition: 0.5s;
 }
 .nav-links ul li:hover::after{
+    width: 100%;
+}
+
+.file-links{
+    flex: 1;
+    text-align: left;
+}
+.file-links ul li{
+    list-style: none;
+    margin-top: 10px;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+}
+.file-links ul li a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+}
+/* Per aggiungere una linea quando si passa con il mouse sotto un menu */
+.file-links ul li::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: rgb(238, 255, 0);
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+.file-links ul li:hover::after{
     width: 100%;
 }
