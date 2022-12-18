@@ -1,0 +1,57 @@
+<html>
+    <head> 
+        <title>ordinamento</title>
+    </head>
+
+    <body>
+        <p>Numeri aggiunti </p>
+        <p id="paragrafo"></p>
+        <p>Numeri ordinati</p>
+        <p id="paragrafo1"></p>
+        <input type="number" id="num">
+        <br><br>
+        <button onclick="aggiungiValori()">Aggiungi</button>
+<script>
+    const v = [];
+    function aggiungiValori() {
+    var str = " ";
+    var x = document.getElementById("num").value;
+    x = parseInt(x);
+    v.push(x);
+    
+    for (i = 0; i < v.length; i++) {
+        str += "<li> "
+        str += v[i];
+        str += "</li>"
+    }
+
+    document.getElementById("paragrafo").innerHTML = str;
+    str = "";
+    ordinamento(v);
+
+    for (i = 0; i < v.length; i++) {
+        str += "<li> "
+        str += v[i];
+        str += "</li>"
+    }
+
+    document.getElementById("paragrafo1").innerHTML = str;
+    }
+
+    function ordinamento(vettore) {
+        var c;
+        
+        for (e = 0; e < vettore.length; e++) {
+            for (i = 0; i < vettore.length - e - 1; i++) {
+                if (parseInt(vettore[i]) > parseInt(vettore[i + 1])) {
+                c = vettore[i];
+                vettore[i] = vettore[i + 1];
+                vettore[i + 1] = c;
+                }
+            }
+        }
+    }
+    
+    </script>
+</body>
+</html>

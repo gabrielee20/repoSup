@@ -1,0 +1,76 @@
+<html>
+    <head> 
+        <title> VETTORI, SOMMA E MOLTIPLICAZIONE </title>
+    </head>
+<style>
+    button {
+        color: white;
+        background-color: red;
+    }
+
+    button:hover {
+        color: white;
+        background-color: blue;
+    }
+</style>
+
+<script>
+    const v1 = [];
+    const v2 = [];
+    const vFinale = [];
+	var indice = 0;
+
+    function AggiungiV1(){
+        var valore = parseInt(document.getElementById("input").value);
+        indice = v1.length;
+		v1[indice] = valore;
+        
+        document.getElementById("v1").innerHTML = "Vettore 1: " + v1;
+    }    
+    
+    function AggiungiV2(){
+        var valore = parseInt(document.getElementById("input").value);
+        indice = v2.length;
+		v2[indice] = valore;
+        
+        document.getElementById("v2").innerHTML = "Vettore 2: " + v2;
+    } 
+    
+    function Somma() {
+        var lunghezza = Math.min(v1.length, v2.length);
+				for(var i = 0; i < lunghezza; i++){
+					vFinale[i] = v1[i] + v2[i];
+				}
+				document.getElementById("risultato").innerHTML = "Somma: " + vFinale;
+
+    }
+
+    function Prodotto() {
+        var lunghezza = Math.min(v1.length, v2.length);
+				for(var i = 0; i < lunghezza; i++){
+					vFinale[i] = v1[i] * v2[i];
+				}
+				document.getElementById("risultato").innerHTML = "Prodotto " + vFinale;
+
+    }
+
+
+</script>
+
+<body>
+    <h1 style="color: blue;"> PRODOTTO E SOMMA TRA DUE VETTORI </h1>
+    <input type="number" id="input" value="0"> <br><br>
+    <button type="button" id="Somma" onclick="Somma()"> SOMMA </button>
+    <button type="button" id="Prodotto" onclick="Prodotto()"> PRODOTTO </button>
+    <button type="button" id="AggiungiV1" onclick="AggiungiV1()"> VETTORE 1 </button>
+    <button type="button" id="AggiungiV2" onclick="AggiungiV2()"> VETTORE 2 </button>
+    <button type="link" id="Azzera" onclick="window.location.href='https://gadaleta.000webhostapp.com/Vettori/SommaProdottoDueVettori.html';"> AZZERA </button>
+
+
+    <p id="v1"></p>
+    <p id="v2"></p>
+    <p id="risultato"></p>
+
+</body>
+
+</html>

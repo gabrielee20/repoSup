@@ -1,0 +1,55 @@
+<html>
+<head>
+    <title>Vettori somma e prodotto</title>
+</head>
+
+<body>
+    <script>
+        const vettore1 = [];
+        const vettore2 = [];
+        const vettore3 = [];
+        var indice = 0;
+        var indice2 = 0;
+        var indice3 = 0;
+        var somma;
+        var prodotto;
+        function sommaFunzione() {
+
+            var x = parseInt(document.getElementById("valori1").value);
+            var z = parseInt(document.getElementById("valori2").value);
+            vettore1[indice] = x; 
+            vettore2[indice2] = z;            
+            somma = x + z;
+            
+            document.getElementById("somma").innerHTML = "La somma è " + somma;
+            //window.alert(somma);
+        }
+        
+        function moltiplicazioneFunzione() {
+
+            var f = parseInt(document.getElementById("valori1").value);
+            var l = parseInt(document.getElementById("valori2").value);
+            vettore1[indice] = f; 
+            vettore2[indice2] = l;            
+            prodotto = f * l;
+
+            document.getElementById("prodotto").innerHTML = "Il prodotto è " + prodotto;
+
+            //window.alert(prodotto);
+        }
+
+    </script>
+
+        <label for="valori1"> Inserisci valori primo vettore:</label>
+        <input type="number" id="valori1" name="valori1"><br><br>
+        <label for="valori2"> Inserisci valori secondo vettore:</label>
+        <input type="number" id="valori2" name="valori2"><br><br>
+        <button onclick = "sommaFunzione()">Somma</button>
+        <button onclick = "moltiplicazioneFunzione()">Moltiplica</button>
+        
+        <p id = "somma"></p>
+        <p id = "prodotto"></p>
+
+</body>
+
+</html>
