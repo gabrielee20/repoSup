@@ -3,11 +3,17 @@
 
 <head>
     <title>Lettura dati CSV</title>
+    <link rel="stylesheet" href="letturacsv.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,300;0,400;0,600;0,700;1,100;1,300;1,400;1,600;1,700&display=swap"
+        rel="stylesheet">
     <script type="text/javascript" src="papaparse.min.js"></script>
 </head>
 
 <body>
-    <input type="file" id="caricaCSV" accept=".csv">
+    <input type="file" id="caricaCSV" accept=".csv"> 
     <button id="bottoneCarica">Lettura CSV</button> <!-- bottone per fare l'upload di un file csv -->
     <table id="tbl-data">
 
@@ -38,10 +44,11 @@
         function creaTabellaHead(tabella, data) { // funzione che crea l'intestazione della tabella
             let thead = tabella.createTHead();
             let riga = thead.insertRow();
+            let j = 0;
             for (let key of data) { //scansiona tutti i dati
                 let th = document.createElement('th');
                 let testo = document.createTextNode(key);
-                th.appendChild(testo); 
+                th.appendChild(testo);
                 riga.appendChild(th);
             }
         }
@@ -51,7 +58,7 @@
             data.map((riga, indice) => {
                 let nuovaCella = nuovaRiga.insertCell();
                 let nuovoTesto = document.createTextNode(riga);
-                nuovaCella.appendChild(nuovoTesto); 
+                nuovaCella.appendChild(nuovoTesto);
             });
         }
     </script>
