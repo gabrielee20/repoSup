@@ -35,27 +35,7 @@ nav img{
     font-size: 20px;
     position: relative;
 }
-.sottomenu {
-    position: absolute;
-    top: 60px;
-    left: -45px;
-    border: 1px solid white;
-    background-color: rgb(112, 108, 108);
-    border-bottom: none;
-    visibility: hidden;
-    opacity: 0;
-}
-.nav-links .has-children:hover .sottomenu{
-    transition: .5s;
-    visibility: visible;
-    opacity: 1;
-    top: 42px;
-}
-.sottomenu li {
-    width: 120px;px;
-    border-bottom: 1px;
-    text-align: center;
-}
+
 /* Per aggiungere una linea quando si passa con il mouse sotto un menu */
 .nav-links ul li::after{
     content: '';
