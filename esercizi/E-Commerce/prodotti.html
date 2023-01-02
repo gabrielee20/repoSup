@@ -11,6 +11,21 @@
         href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,300;0,400;0,600;0,700;1,100;1,300;1,400;1,600;1,700&display=swap"
         rel="stylesheet">
 </head>
+<script>
+    let requestURL = './smartphone.json';
+    let request = new XMLHttpRequest();
+    request.open('GET', requestURL);
+    request.responseType = 'json';
+    request.send();
+
+    request.onload = function () {
+        const smartphone = request.response;
+        //console.log(smartphone[0].id) per testare la lettura
+        document.getElementById("modello").innerHTML = smartphone[0].modello;
+}
+
+
+</script>
 
 <body>
     <section class="header">
@@ -26,7 +41,9 @@
             </div>
         </nav>
     </section>
-    <section>
-
+    <section class="prodotti">
+        <div class="prodotto_caratteristiche">
+            Modello: <span id="modello"></span> <br>
+        </div>
     </section>
 </body>

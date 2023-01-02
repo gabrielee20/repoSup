@@ -4,7 +4,7 @@
     font-family: 'Raleway', sans-serif;
 }
 .header{
-    min-height: 100vh;
+    min-height: 25vh;
     width: 100%;
     position: relative;
 }

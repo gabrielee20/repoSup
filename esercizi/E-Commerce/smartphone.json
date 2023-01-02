@@ -1,0 +1,38 @@
+[
+    {
+        "id": 1,
+        "produttore": "Samsung",
+        "modello": "S22",
+        "colore": "Black",
+        "specifiche": {
+            "sistemaOperativo": "Android",
+            "processore": "Exynos 2200",
+            "velocita_processore": "2.8 GHz",
+            "memoria": "256 GB",
+            "ram": "8 GB",
+            "sensori_riconoscimento": "Face ID, Touch ID",
+            "schermo_dimensioni": "6.1 pollici",
+            "schermo_tipologia": "Dynamic AMOLED 2X",
+            "fotocamera_posteriore": "50 mpx",
+            "fotocamera_anteriore": "10 mpx"
+        }
+    },
+    {
+        "id": 2,
+        "produttore": "Apple",
+        "modello": "iPhone 14",
+        "colore": "Galassia",
+        "specifiche": {
+            "sistemaOperativo": "iOS 16",
+            "processore": "A15 Bionic",
+            "velocita_processore": "6-Core",
+            "memoria": "128 GB",
+            "ram": "6 GB",
+            "sensori_riconoscimento": "Face ID",
+            "schermo_dimensioni": "6.1 pollici",
+            "schermo_tipologia": "OLED",
+            "fotocamera_posteriore": "12 mpx",
+            "fotocamera_anteriore": "12 mpx"
+        }
+    }
+]
