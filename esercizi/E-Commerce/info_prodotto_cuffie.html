@@ -13,10 +13,22 @@
     <link rel="stylesheet" href="footer.css">
     <link rel="stylesheet" type="text/css"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
-
+    <script type="text/javascript" src="papaparse.min.js"></script>
 
 </head>
-<script>
+<script type="text/javascript"> // tutte le opzioni sottostanti le ricavo dalla documentazione sul sito papaparse.com
+    Papa.parse("https://raw.githubusercontent.com/gabrielee20/gabrielee20.github.io/main/esercizi/E-Commerce/cuffie.csv", {
+        download: true, //opzione che scarica il file contenuto come primo argomento della funzione
+        header: false,  //opzione che esclude la prima riga del file csv dal parse
+        complete: function (results) { // opzione che comprende ciò che viene eseguito solo quando il parse è concluso
+            let i = 0;
+            results.data.map((data, indice) => {
+                console.log(data); // visualizza tutti i dati presenti nel csv nella console (utile per capire come fare poi la tabella)
+                //alert(data);
+            });
+        }
+    });    
+    
 </script>
 
 <body>
