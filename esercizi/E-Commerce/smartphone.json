@@ -15,7 +15,8 @@
             "schermo_tipologia": "Dynamic AMOLED 2X",
             "fotocamera_posteriore": "50 mpx",
             "fotocamera_anteriore": "10 mpx"
-        }
+        },
+        "prezzo": "899€"
     },
     {
         "id": 2,
@@ -33,6 +34,7 @@
             "schermo_tipologia": "OLED",
             "fotocamera_posteriore": "12 mpx",
             "fotocamera_anteriore": "12 mpx"
-        }
+        },
+        "prezzo": "999€"
     }
 ]

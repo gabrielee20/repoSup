@@ -105,3 +105,10 @@ div.desc {
     display: table;
     clear: both;
 }
+
+.bottone {
+    color: rgb(233, 73, 73);
+    border: none;
+    background-color: transparent;
+    font-size:20px;
+}
