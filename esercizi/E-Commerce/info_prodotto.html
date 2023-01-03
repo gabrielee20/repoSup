@@ -22,9 +22,9 @@
     request.open('GET', requestURL);
     request.responseType = 'json';
     request.send();
-    var url=document.location.search.substring(0); 
-        var url1=url.split("&")[0];
-        var indice=url1.substr(8); 
+    var url = document.location.search.substring(0);
+    var url1 = url.split("&")[0];
+    var indice = url1.substr(8);
 
     request.onload = function () {
         const smartphone = request.response;
@@ -65,17 +65,17 @@
         <div class="responsive">
             <div class="gallery">
                 <div class="desc" style="text-align: left;">
-                    <p id="sistemaOperativo"></p> 
-                    <p id="processore"></p> 
-                    <p id="velocita_processore"></p> 
-                    <p id="memoria"></p> 
-                    <p id="ram"></p> 
-                    <p id="sensori"></p> 
-                    <p id="schermo_dimensioni"></p> 
-                    <p id="schermo_tipologia"></p> 
+                    <p id="sistemaOperativo"></p>
+                    <p id="processore"></p>
+                    <p id="velocita_processore"></p>
+                    <p id="memoria"></p>
+                    <p id="ram"></p>
+                    <p id="sensori"></p>
+                    <p id="schermo_dimensioni"></p>
+                    <p id="schermo_tipologia"></p>
                     <p id="fotocamera_posteriore"></p>
                     <p id="fotocamera_anteriore"></p> <br>
-                    <p id="prezzo" style="color: red; font-size:35px; text-align: left;"></p> 
+                    <p id="prezzo" style="color: red; font-size:35px; text-align: left;"></p>
                 </div>
             </div>
         </div>
