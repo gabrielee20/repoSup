@@ -26,7 +26,17 @@
     request.onload = function () {
         const smartphone = request.response;
         //console.log(smartphone[0].id) per testare la lettura
-        document.getElementById("modello").innerHTML = smartphone[0].modello;
+        document.getElementById("nome").innerHTML = smartphone[0].produttore + " " + smartphone[0].modello + " " + smartphone[0].colore;
+        document.getElementById("sistemaOperativo").innerHTML = "Sistema operativo: " + smartphone[0].specifiche.sistemaOperativo;
+        document.getElementById("processore").innerHTML = "Processore: " + smartphone[0].specifiche.processore;
+        document.getElementById("velocita_processore").innerHTML = "Velocità processore: " + smartphone[0].specifiche.velocita_processore;
+        document.getElementById("memoria").innerHTML = "Memoria: " + smartphone[0].specifiche.memoria;
+        document.getElementById("ram").innerHTML = "RAM: " + smartphone[0].specifiche.ram;
+        document.getElementById("sensori").innerHTML = "Sensori di riconoscimento: " + smartphone[0].specifiche.sensori_riconoscimento;
+        document.getElementById("schermo_dimensioni").innerHTML = "Schermo dimensioni: " + smartphone[0].specifiche.schermo_dimensioni;
+        document.getElementById("schermo_tipologia").innerHTML = "Schermo tipologia: " + smartphone[0].specifiche.schermo_tipologia;
+        document.getElementById("fotocamera_posteriore").innerHTML = "Fotocamera posteriore: " + smartphone[0].specifiche.fotocamera_posteriore;
+        document.getElementById("fotocamera_anteriore").innerHTML = "Fotocamera anteriore: " + smartphone[0].specifiche.fotocamera_anteriore;
     }
 
 
@@ -46,33 +56,50 @@
             </div>
         </nav>
     </section>
-    <!-- <section class="prodotti">
-        <div class="prodotto_caratteristiche">
-            Modello: <span id="modello"></span> <br>
-        </div>
-    </section> -->
     <section>
         <div class="responsive">
             <div class="gallery">
-                <a href="images/smartphone.jpg">
-                    <img src="images/smartphone.jpg" alt="Smartphone Shop" width="600" height="400">
-                </a>
-                <div class="desc">immagine prodotto 1</div>
+                <img src="images/smartphone/s22.jpg" alt="Samsung Galaxy S22" width="600" height="400">
+                <div class="desc">
+                    <p id="nome" style="font-size: 20px;"></p> <br>
+                    <p id="sistemaOperativo"></p> 
+                    <p id="processore"></p> 
+                    <p id="velocita_processore"></p> 
+                    <p id="memoria"></p> 
+                    <p id="ram"></p> 
+                    <p id="sensori"></p> 
+                    <p id="schermo_dimensioni"></p> 
+                    <p id="schermo_tipologia"></p> 
+                    <p id="fotocamera_posteriore"></p>
+                    <p id="fotocamera_anteriore"></p>
+                </div>
             </div>
         </div>
         <div class="responsive">
             <div class="gallery">
-                <a href="images/smartphone.jpg">
-                    <img src="images/smartphone.jpg" alt="Shop Cuffie" width="600" height="400">
-                </a>
-                <div class="desc">immagine prodotto 2</div>
+                <img src="images/smartphone/iphone14.jpg" alt="iPhone 14" width="600" height="400">
+                <div class="desc">
+                    <p id="nome" style="font-size: 20px;"></p> <br>
+                    <p id="sistemaOperativo"></p> 
+                    <p id="processore"></p> 
+                    <p id="velocita_processore"></p> 
+                    <p id="memoria"></p> 
+                    <p id="ram"></p> 
+                    <p id="sensori"></p> 
+                    <p id="schermo_dimensioni"></p> 
+                    <p id="schermo_tipologia"></p> 
+                    <p id="fotocamera_posteriore"></p>
+                    <p id="fotocamera_anteriore"></p>
+                </div>
             </div>
         </div>
         <div class="clearfix"></div>
     </section>
+
     <section>
         <br><br><br>
     </section>
+
 
     <footer class="footer">
         <div class="container">
