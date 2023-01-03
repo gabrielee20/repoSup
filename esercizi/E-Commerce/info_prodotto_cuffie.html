@@ -17,19 +17,6 @@
 
 </head>
 <script>
-    let requestURL = './smartphone.json';
-    let request = new XMLHttpRequest();
-    request.open('GET', requestURL);
-    request.responseType = 'json';
-    request.send();
-
-    request.onload = function () {
-        const smartphone = request.response;
-        //console.log(smartphone[0].id) per testare la lettura
-        document.getElementById("modello").innerHTML = smartphone[0].modello;
-    }
-
-
 </script>
 
 <body>
@@ -46,26 +33,10 @@
             </div>
         </nav>
     </section>
-    <!-- <section class="prodotti">
-        <div class="prodotto_caratteristiche">
-            Modello: <span id="modello"></span> <br>
-        </div>
-    </section> -->
     <section>
         <div class="responsive">
             <div class="gallery">
-                <a href="info_prodotto_cuffie.html">
-                    <img src="images/cuffie/buds.jpg" alt="Smartphone Shop" width="600" height="400">
-                </a>
                 <div class="desc">Samsung Buds 2</div>
-            </div>
-        </div>
-        <div class="responsive">
-            <div class="gallery">
-                <a href="info_prodotto_cuffie.html">
-                    <img src="images/cuffie/airpodspro.jpg" alt="Shop Cuffie" width="600" height="400">
-                </a>
-                <div class="desc">AirPods Pro 2</div>
             </div>
         </div>
         <div class="clearfix"></div>
