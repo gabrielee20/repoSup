@@ -42,7 +42,15 @@
         document.getElementById("fotocamera_anteriore").innerHTML = "Fotocamera anteriore: " + smartphone[indice].specifiche.fotocamera_anteriore;
         document.getElementById("prezzo").innerHTML = smartphone[indice].prezzo;
     }
-
+    function addtocart() {
+        if (localStorage.clickcount) {
+            localStorage.clickcount = Number(localStorage.clickcount) + 1;
+            alert("Prodotto aggiunto correttamente al carrello");
+            console.log(localStorage.clickcount);
+        } else {
+            localStorage.clickcount = 1;
+        }
+    }
 
 </script>
 
@@ -61,7 +69,7 @@
         </nav>
     </section>
     <section>
-        <p id="nome" style="font-size: 60px; padding-left: 30px;"></p> <br>
+        <p id="nome" style="font-size: 60px; padding-left: 20px;"></p> <br>
         <div class="responsive">
             <div class="gallery">
                 <div class="desc" style="text-align: left;">
@@ -76,8 +84,8 @@
                     <p id="fotocamera_posteriore"></p>
                     <p id="fotocamera_anteriore"></p> <br>
                     <p id="prezzo" style="color: red; font-size:35px; text-align: left;"></p>
-                    <button style="border: none; background-color: transparent; width: 50px;"><img
-                            src="images/smartphone/carrello.png" alt="aggiungi al carrello"></button>
+                    <button style="border: none; background-color: transparent; width: 50px;" onclick="addtocart()"><a href="carrello.html"> <img src="images/smartphone/carrello.png" alt="aggiungi al carrello"></a></button>
+                    <p id="demo"></p>
                 </div>
             </div>
         </div>
