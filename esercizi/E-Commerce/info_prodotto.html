@@ -45,11 +45,12 @@
     function addtocart() {
         if (localStorage.clickcount) {
             localStorage.clickcount = Number(localStorage.clickcount) + 1;
-            alert("Prodotto aggiunto correttamente al carrello");
             console.log(localStorage.clickcount);
+            alert("Prodotto aggiunto correttamente al carrello");
         } else {
             localStorage.clickcount = 1;
         }
+
     }
 
 </script>
