@@ -29,7 +29,6 @@
     request.onload = function () {
         const smartphone = request.response;
         var id_prodotto = smartphone[indice].id;
-
         //console.log(smartphone[indice].id) per testare la lettura
         document.getElementById("nome").innerHTML = smartphone[indice].produttore + " " + smartphone[indice].modello + " " + smartphone[indice].colore;
         document.getElementById("sistemaOperativo").innerHTML = "Sistema operativo: " + smartphone[indice].specifiche.sistemaOperativo;

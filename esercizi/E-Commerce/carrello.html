@@ -26,11 +26,22 @@
         const smartphone = request.response;
         console.log(indice);
         console.log(smartphone[indice].produttore);
-        document.getElementById("elenco").innerHTML = "- " + smartphone[indice].produttore + " " + smartphone[indice].modello; 
+        document.getElementById("elenco").innerHTML = "- " + smartphone[indice].produttore + " " + smartphone[indice].modello + " " + smartphone[indice].prezzo;
     }
 
     function removetocart() {
         localStorage.clear();
+    }
+
+    function inviaOrdine() {
+        var indice = JSON.parse(localStorage.getItem("i"));
+        const smartphone = request.response;
+        let now = new Date();
+        var email = "invia-ordine@telegmail.com";
+        var subject = "Nuovo ordine del: " + now;
+        var emailBody = "Dettagli ordine: " + smartphone[indice].produttore + " " + smartphone[indice].modello + " " + smartphone[indice].prezzo;
+        var mailto_link = 'mailto:' + email + '?subject=' + subject + '&body=' + encodeURIComponent(emailBody);
+        win = window.open(mailto_link, 'emailWin');
     }
 
 </script>
@@ -51,15 +62,15 @@
     </section>
     <section>
         <h1 style="padding-left: 20px;">Il tuo carrello </h1><br>
-        <p id="elenco" style="padding-left: 20px;"></p>
+        <p id="elenco" style="padding-left: 20px;"></p> <br>
         <div class="responsive">
-            <div class="gallery">
-                <div class="desc" style="text-align: left;">
-                    <button style="border: none; background-color: transparent; width: 50px;"
-                        onclick="removetocart()"><a href="carrello.html"> <img src="images/smartphone/elimina.png"
-                                alt="rimuovi dal carrello" style="width: 30px;"></a></button>
+            <div class="desc" style="text-align: left;">
+                <button style="border: none; background-color: transparent; width: 50px;" onclick="removetocart()"><a
+                        href="carrello.html"> <img src="images/smartphone/elimina.png" alt="rimuovi dal carrello"
+                            style="width: 30px;"></a></button>
 
-                </div>
+                <button style="border: none; background-color: transparent; width: 50px;" onclick="inviaOrdine()"><a>
+                        <img src="images/smartphone/invia.png" alt="invia_ordine" style="width: 30px;"></a></button>
             </div>
         </div>
         <div class="clearfix"></div>
