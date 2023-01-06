@@ -43,15 +43,6 @@
         document.getElementById("fotocamera_anteriore").innerHTML = "Fotocamera anteriore: " + smartphone[indice].specifiche.fotocamera_anteriore;
         document.getElementById("prezzo").innerHTML = smartphone[indice].prezzo;
     }
-    /*function addtocart() {
-        if (localStorage.clickcount) {
-            localStorage.clickcount = Number(localStorage.clickcount) + 1;
-            console.log(localStorage.clickcount);
-            alert(smartphone[1].id);
-        } else {
-            localStorage.clickcount = 1;
-        }
-    }*/
     function addtocart() {
         var indiciProdotti = indice;
         localStorage.setItem("i", JSON.stringify(indiciProdotti));
@@ -112,12 +103,12 @@
                     </ul>
                 </div>
                 <div class="footer-col">
-                    <h4>ottieni aiuto</h4>
+                    <h4><a href="contattaci.html" style="text-decoration: none; color: white;">ottieni aiuto</a></h4>
                     <ul>
-                        <li><a href="#">FAQ</a></li>
-                        <li><a href="#">spedizioni</a></li>
-                        <li><a href="#">resi</a></li>
-                        <li><a href="#">metodi di pagamento</a></li>
+                        <li><a href="contattaci.html">FAQ</a></li>
+                        <li><a href="contattaci.html">spedizioni</a></li>
+                        <li><a href="contattaci.html">resi</a></li>
+                        <li><a href="contattaci.html">metodi di pagamento</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
@@ -130,14 +121,13 @@
                 <div class="footer-col">
                     <h4>seguici sui social</h4>
                     <div class="social-links">
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="hp.html"><i class="fab fa-facebook-f"></i></a>
+                        <a href="hp.html"><i class="fab fa-twitter"></i></a>
+                        <a href="hp.html"><i class="fab fa-instagram"></i></a>
                     </div>
                 </div>
             </div>
         </div>
     </footer>
-
 
 </body>
