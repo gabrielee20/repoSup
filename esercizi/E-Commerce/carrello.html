@@ -15,21 +15,24 @@
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
 </head>
 <script>
-    let requestURL = './carrello.html';
+    let requestURL = './smartphone.json';
     let request = new XMLHttpRequest();
     request.open('GET', requestURL);
+    request.responseType = 'json';
     request.send();
 
     request.onload = function () {
-        let totale_prodotti = localStorage.clickcount;
-        document.getElementById("totale_prodotti").innerHTML = "Totale prodotti aggiunti: " + totale_prodotti;
+        var indice = JSON.parse(localStorage.getItem("i"));
+        const smartphone = request.response;
+        console.log(indice);
+        console.log(smartphone[indice].produttore);
+        document.getElementById("elenco").innerHTML = "- " + smartphone[indice].produttore + " " + smartphone[indice].modello; 
     }
-    function removetocart() {
-        if (localStorage.clickcount >= 1) {
-            localStorage.clickcount = 0;
-        }
 
+    function removetocart() {
+        localStorage.clear();
     }
+
 </script>
 
 <body>
@@ -48,13 +51,13 @@
     </section>
     <section>
         <h1 style="padding-left: 20px;">Il tuo carrello </h1><br>
-        <p id="totale_prodotti" style="padding-left: 20px;"></p>
+        <p id="elenco" style="padding-left: 20px;"></p>
         <div class="responsive">
             <div class="gallery">
                 <div class="desc" style="text-align: left;">
                     <button style="border: none; background-color: transparent; width: 50px;"
                         onclick="removetocart()"><a href="carrello.html"> <img src="images/smartphone/elimina.png"
-                                alt="rimuovi dal carrello"></a></button>
+                                alt="rimuovi dal carrello" style="width: 30px;"></a></button>
 
                 </div>
             </div>

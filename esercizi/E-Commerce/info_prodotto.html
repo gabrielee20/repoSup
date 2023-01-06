@@ -44,7 +44,7 @@
         document.getElementById("fotocamera_anteriore").innerHTML = "Fotocamera anteriore: " + smartphone[indice].specifiche.fotocamera_anteriore;
         document.getElementById("prezzo").innerHTML = smartphone[indice].prezzo;
     }
-    function addtocart() {
+    /*function addtocart() {
         if (localStorage.clickcount) {
             localStorage.clickcount = Number(localStorage.clickcount) + 1;
             console.log(localStorage.clickcount);
@@ -52,9 +52,11 @@
         } else {
             localStorage.clickcount = 1;
         }
-
+    }*/
+    function addtocart() {
+        var indiciProdotti = indice;
+        localStorage.setItem("i", JSON.stringify(indiciProdotti));
     }
-
 </script>
 
 <body>
@@ -66,7 +68,7 @@
                     <li><a href="hp.html">Home</a></li>
                     <li><a href="prodotti.html">Prodotti</a></li>
                     <li><a href="info.html">Info</a></li>
-                    <li><a href=""><img src="images/carrello.png" style="width:35px"></a></li>
+                    <li><a href="carrello.html"><img src="images/carrello.png" style="width:35px"></a></li>
                 </ul>
             </div>
         </nav>
@@ -87,8 +89,9 @@
                     <p id="fotocamera_posteriore"></p>
                     <p id="fotocamera_anteriore"></p> <br>
                     <p id="prezzo" style="color: red; font-size:35px; text-align: left;"></p>
-                    <button style="border: none; background-color: transparent; width: 50px;" onclick="addtocart()"><a href="carrello.html"> <img src="images/smartphone/carrello.png" alt="aggiungi al carrello"></a></button>
-                    <p id="demo"></p>
+                    <button style="border: none; background-color: transparent; width: 50px;" onclick="addtocart()"><a
+                            href="carrello.html"> <img src="images/smartphone/carrello.png"
+                                alt="aggiungi al carrello"></a></button>
                 </div>
             </div>
         </div>
