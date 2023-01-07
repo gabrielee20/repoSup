@@ -36,5 +36,81 @@
             "fotocamera_anteriore": "12 mpx"
         },
         "prezzo": "999€"
+    },
+    {
+        "id": 3,
+        "produttore": "Huawei",
+        "modello": "Nova 9",
+        "colore": "Blu",
+        "specifiche": {
+            "sistemaOperativo": "Android 10",
+            "processore": "Snapdragon 778G",
+            "velocita_processore": "8-Core",
+            "memoria": "128 GB",
+            "ram": "8 GB",
+            "sensori_riconoscimento": "Impronte digitali",
+            "schermo_dimensioni": "6.57 pollici",
+            "schermo_tipologia": "OLED",
+            "fotocamera_posteriore": "50 mpx",
+            "fotocamera_anteriore": "32 mpx"
+        },
+        "prezzo": "199€"
+    },
+    {
+        "id": 4,
+        "produttore": "Xiaomi",
+        "modello": "Mi 11",
+        "colore": "Mint Green",
+        "specifiche": {
+            "sistemaOperativo": "Android 11",
+            "processore": "Snapdragon 780",
+            "velocita_processore": "8-Core",
+            "memoria": "128 GB",
+            "ram": "8 GB",
+            "sensori_riconoscimento": "Impronte digitali e Face ID",
+            "schermo_dimensioni": "6.55 pollici",
+            "schermo_tipologia": "AMOLED",
+            "fotocamera_posteriore": "64 mpx",
+            "fotocamera_anteriore": "20 mpx"
+        },
+        "prezzo": "299€"
+    },
+    {
+        "id": 5,
+        "produttore": "Samsung",
+        "modello": "A52s",
+        "colore": "Awesome Violet",
+        "specifiche": {
+            "sistemaOperativo": "Android 12",
+            "processore": "Snapdragon 778G",
+            "velocita_processore": "8-Core",
+            "memoria": "128 GB",
+            "ram": "6 GB",
+            "sensori_riconoscimento": "Impronte digitali e Face ID",
+            "schermo_dimensioni": "6.55 pollici",
+            "schermo_tipologia": "Super AMOLED",
+            "fotocamera_posteriore": "64 mpx",
+            "fotocamera_anteriore": "32 mpx"
+        },
+        "prezzo": "340€"
+    },
+    {
+        "id": 6,
+        "produttore": "Oppo",
+        "modello": "Reno 8 Pro",
+        "colore": "Glazed Black",
+        "specifiche": {
+            "sistemaOperativo": "Android 12",
+            "processore": "Mediatek Dimensity 8100",
+            "velocita_processore": "8-Core",
+            "memoria": "256 GB",
+            "ram": "8 GB",
+            "sensori_riconoscimento": "Impronte digitali",
+            "schermo_dimensioni": "6.7 pollici",
+            "schermo_tipologia": "AMOLED",
+            "fotocamera_posteriore": "50 mpx",
+            "fotocamera_anteriore": "32 mpx"
+        },
+        "prezzo": "526,90€"
     }
 ]
