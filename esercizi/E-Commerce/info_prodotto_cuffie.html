@@ -36,6 +36,12 @@
         }
     });
 
+    function addtocart() {
+        var indiciProdotti = indice;
+        localStorage.setItem("i2", JSON.stringify(indiciProdotti));
+    }
+
+
 </script>
 
 <body>
@@ -53,7 +59,10 @@
         </nav>
     </section>
     <section>
-        <p id="prodotto" style="padding-left: 20px; font-size: 30px;"></p>
+        <h1 id="prodotto" style="padding-left: 20px;"></h1> <br>
+        <button style="border: none; background-color: transparent; width: 50px;" onclick="addtocart()"><a
+                href="carrello.html"> <img src="images/smartphone/carrello.png" alt="aggiungi al carrello" style="width: 60px; padding-left: 20px;"></a></button>
+
     </section>
     <section>
         <br><br><br>
