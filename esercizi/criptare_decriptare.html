@@ -1,0 +1,41 @@
+<html>
+    <head>
+        <title>
+            GIULIO CRIPTATO
+        </title>
+    </head>
+<script>
+
+    function Cripta(frase, chiave) {
+        var alfabeto = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+        frase.value = frase.value.toUpperCase();
+        var fraseCriptata = "";
+        var chiaveNumerica = parseInt(chiave.value);
+
+        for(var i = 0; i < frase.value.length; i++){
+            var lettera = frase.value.charAt(i);
+
+            if (lettera >= 'A' & lettera <= 'Z') {
+                var nuovaLettera = alfabeto.indexOf(lettera);
+                nuovaLettera = (nuovaLettera + chiaveNumerica) % 26;
+                fraseCriptata += alfabeto.charAt(nuovaLettera);
+            }
+        }
+        
+        window.alert("La tua frase criptata è: " + fraseCriptata);
+    }
+</script>
+
+<body>
+<h2><strong>GIULIO CRIPTATO</strong></h2>
+
+<form>
+<label>Inserisci una frase da criptare</label> <br>
+<input name = "frase" type="text"><br><br>
+<label>Inserisci la chiave numerica</label> <br>
+<input name = "chiave" type="text" value= 5 ><br><br>
+<input type = "button" class = "button" value = "Criptare" onclick = "Cripta(frase,chiave)">
+</form>
+
+</body>
+</html>

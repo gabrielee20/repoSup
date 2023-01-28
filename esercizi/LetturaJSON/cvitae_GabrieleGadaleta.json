@@ -1,0 +1,25 @@
+{
+    "Nome": "Gabriele",
+    "Cognome": "Gadaleta",
+    "DataDiNascita": "21/07/2004",
+    "Nazionalità": "Italiana",
+    "NumeroTelefono": 3245469736,
+    "Email": "gadaleta.gabriele@itiscannizzaro.edu.it",
+    "Presentazione": "Sono Gabriele Gadaleta",
+    "Istruzione": [
+      "Diploma di terza media"
+    ],
+    "EsperienzaLavorativa": [
+      "PCTO presso 'Phloema'"
+    ],
+    "CompetenzeLinguistiche": [
+      "Italiano",
+      "Inglese",
+      "Spagnolo"
+    ],
+    "CompetenzeDigitali": [
+      "Programmatore",
+      "Sistemista"
+    ],
+    "Patente": "In fase di elaborazione"
+  }

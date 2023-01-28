@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShopNow.it</title>
+    <link rel="stylesheet" href="style_hp.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="icon" type="image/x-icon" href="images/logo.png">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,300;0,400;0,600;0,700;1,100;1,300;1,400;1,600;1,700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="footer.css">
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+
+
+</head>
+<script>
+    let requestURL = './smartphone.json';
+    let request = new XMLHttpRequest();
+    request.open('GET', requestURL);
+    request.responseType = 'json';
+    request.send();
+
+    request.onload = function () {
+        const smartphone = request.response;
+        //console.log(smartphone[0].id) per testare la lettura
+        document.getElementById("nome").innerHTML = smartphone[0].produttore + " " + smartphone[0].modello + " " + smartphone[0].colore;
+    }
+
+
+</script>
+
+<body>
+    <section class="header">
+        <nav>
+            <a href="hp.html"><img src="images/logo.png" style="width:60px"></a>
+            <div class="nav-links">
+                <ul>
+                    <li><a href="hp.html">Home</a></li>
+                    <li><a href="prodotti.html">Prodotti</a></li>
+                    <li><a href="info.html">Info</a></li>
+                    <li><a href="carrello.html"><img src="images/carrello.png" style="width:35px"></a></li>
+                </ul>
+            </div>
+        </nav>
+    </section>
+    <section>
+        <div class="responsive">
+            <div class="gallery">
+                <img src="images/smartphone/s22.jpg" alt="Samsung Galaxy S22" width="600" height="400">
+                <div class="desc">
+                    <form method="get" action="info_prodotto.html" name="num">
+                        <input type="hidden" name="numero" value="0">
+                        <input type="submit" value="Samsung S22" class="bottone">
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="responsive">
+            <div class="gallery">
+                <img src="images/smartphone/iphone14.jpg" alt="iPhone 14" width="600" height="400">
+                <div class="desc">
+                    <form method="get" action="info_prodotto.html" name="num">
+                        <input type="hidden" name="numero" value="1">
+                        <input type="submit" value="iPhone 14" class="bottone">
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="responsive">
+            <div class="gallery">
+                <img src="images/smartphone/nova9.jpg" alt="Huawei Nova 9" width="600" height="400">
+                <div class="desc">
+                    <form method="get" action="info_prodotto.html" name="num">
+                        <input type="hidden" name="numero" value="2">
+                        <input type="submit" value="Huawei Nova 9" class="bottone">
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="responsive">
+            <div class="gallery">
+                <img src="images/smartphone/mi11.jpg" alt="Xiaomi Mi 11" width="600" height="400">
+                <div class="desc">
+                    <form method="get" action="info_prodotto.html" name="num">
+                        <input type="hidden" name="numero" value="3">
+                        <input type="submit" value="Xiaomi Mi 11" class="bottone">
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="responsive">
+            <div class="gallery">
+                <img src="images/smartphone/a52s.jpg" alt="Samsung A52s" width="600" height="400">
+                <div class="desc">
+                    <form method="get" action="info_prodotto.html" name="num">
+                        <input type="hidden" name="numero" value="4">
+                        <input type="submit" value="Samsung A52s" class="bottone">
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="responsive">
+            <div class="gallery">
+                <img src="images/smartphone/reno8Pro.jpg" alt="Oppo Reno 8 Pro" width="600" height="400">
+                <div class="desc">
+                    <form method="get" action="info_prodotto.html" name="num">
+                        <input type="hidden" name="numero" value="5">
+                        <input type="submit" value="Oppo Reno 8 Pro" class="bottone">
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="clearfix"></div>
+    </section>
+
+    <section>
+        <br><br><br>
+    </section>
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col">
+                    <h4><a href="info.html" style="text-decoration: none; color: white;">Azienda</a></h4>
+                    <ul>
+                        <li><a href="chi_siamo.html">Chi siamo</a></li>
+                        <li><a href="dove_siamo.html">Dove siamo</a></li>
+                        <li><a href="contattaci.html">Contattaci</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4><a href="contattaci.html" style="text-decoration: none; color: white;">ottieni aiuto</a></h4>
+                    <ul>
+                        <li><a href="contattaci.html">FAQ</a></li>
+                        <li><a href="contattaci.html">spedizioni</a></li>
+                        <li><a href="contattaci.html">resi</a></li>
+                        <li><a href="contattaci.html">metodi di pagamento</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4><a href="prodotti.html" style="text-decoration: none; color: white;">Prodotti</a></h4>
+                    <ul>
+                        <li><a href="shop_smartphone.html">smartphone</a></li>
+                        <li><a href="shop_cuffie.html">cuffie</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>seguici sui social</h4>
+                    <div class="social-links">
+                        <a href="hp.html"><i class="fab fa-facebook-f"></i></a>
+                        <a href="hp.html"><i class="fab fa-twitter"></i></a>
+                        <a href="hp.html"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+</body>

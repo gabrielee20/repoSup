@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShopNow.it</title>
+    <link rel="stylesheet" href="style_hp.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="icon" type="image/x-icon" href="images/logo.png">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,300;0,400;0,600;0,700;1,100;1,300;1,400;1,600;1,700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="footer.css">
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+
+
+</head>
+<script>
+    let requestURL = './smartphone.json';
+    let request = new XMLHttpRequest();
+    request.open('GET', requestURL);
+    request.responseType = 'json';
+    request.send();
+    var url = document.location.search.substring(0);
+    var url1 = url.split("&")[0];
+    var indice = url1.substr(8);
+
+    request.onload = function () {
+        const smartphone = request.response;
+        var id_prodotto = smartphone[indice].id;
+        //console.log(smartphone[indice].id) per testare la lettura
+        document.getElementById("nome").innerHTML = smartphone[indice].produttore + " " + smartphone[indice].modello + " " + smartphone[indice].colore;
+        document.getElementById("sistemaOperativo").innerHTML = "Sistema operativo: " + smartphone[indice].specifiche.sistemaOperativo;
+        document.getElementById("processore").innerHTML = "Processore: " + smartphone[indice].specifiche.processore;
+        document.getElementById("velocita_processore").innerHTML = "Velocità processore: " + smartphone[indice].specifiche.velocita_processore;
+        document.getElementById("memoria").innerHTML = "Memoria: " + smartphone[indice].specifiche.memoria;
+        document.getElementById("ram").innerHTML = "RAM: " + smartphone[indice].specifiche.ram;
+        document.getElementById("sensori").innerHTML = "Sensori di riconoscimento: " + smartphone[indice].specifiche.sensori_riconoscimento;
+        document.getElementById("schermo_dimensioni").innerHTML = "Schermo dimensioni: " + smartphone[indice].specifiche.schermo_dimensioni;
+        document.getElementById("schermo_tipologia").innerHTML = "Schermo tipologia: " + smartphone[indice].specifiche.schermo_tipologia;
+        document.getElementById("fotocamera_posteriore").innerHTML = "Fotocamera posteriore: " + smartphone[indice].specifiche.fotocamera_posteriore;
+        document.getElementById("fotocamera_anteriore").innerHTML = "Fotocamera anteriore: " + smartphone[indice].specifiche.fotocamera_anteriore;
+        document.getElementById("prezzo").innerHTML = smartphone[indice].prezzo;
+    }
+    function addtocart() {
+        var indiciProdotti = indice;
+        localStorage.setItem("i", JSON.stringify(indiciProdotti));
+    }
+</script>
+
+<body>
+    <section class="header">
+        <nav>
+            <a href="hp.html"><img src="images/logo.png" style="width:60px"></a>
+            <div class="nav-links">
+                <ul>
+                    <li><a href="hp.html">Home</a></li>
+                    <li><a href="prodotti.html">Prodotti</a></li>
+                    <li><a href="info.html">Info</a></li>
+                    <li><a href="carrello.html"><img src="images/carrello.png" style="width:35px"></a></li>
+                </ul>
+            </div>
+        </nav>
+    </section>
+    <section>
+        <p id="nome" style="font-size: 60px; padding-left: 20px;"></p> <br>
+        <div class="responsive">
+            <div class="gallery">
+                <div class="desc" style="text-align: left;">
+                    <p id="sistemaOperativo"></p>
+                    <p id="processore"></p>
+                    <p id="velocita_processore"></p>
+                    <p id="memoria"></p>
+                    <p id="ram"></p>
+                    <p id="sensori"></p>
+                    <p id="schermo_dimensioni"></p>
+                    <p id="schermo_tipologia"></p>
+                    <p id="fotocamera_posteriore"></p>
+                    <p id="fotocamera_anteriore"></p> <br>
+                    <p id="prezzo" style="color: red; font-size:35px; text-align: left;"></p>
+                    <button style="border: none; background-color: transparent; width: 50px;" onclick="addtocart()"><a
+                            href="carrello.html"> <img src="images/smartphone/carrello.png"
+                                alt="aggiungi al carrello"></a></button>
+                </div>
+            </div>
+        </div>
+        <div class="clearfix"></div>
+    </section>
+
+    <section>
+        <br><br><br>
+    </section>
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col">
+                    <h4><a href="info.html" style="text-decoration: none; color: white;">Azienda</a></h4>
+                    <ul>
+                        <li><a href="chi_siamo.html">Chi siamo</a></li>
+                        <li><a href="dove_siamo.html">Dove siamo</a></li>
+                        <li><a href="contattaci.html">Contattaci</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4><a href="contattaci.html" style="text-decoration: none; color: white;">ottieni aiuto</a></h4>
+                    <ul>
+                        <li><a href="contattaci.html">FAQ</a></li>
+                        <li><a href="contattaci.html">spedizioni</a></li>
+                        <li><a href="contattaci.html">resi</a></li>
+                        <li><a href="contattaci.html">metodi di pagamento</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4><a href="prodotti.html" style="text-decoration: none; color: white;">Prodotti</a></h4>
+                    <ul>
+                        <li><a href="shop_smartphone.html">smartphone</a></li>
+                        <li><a href="shop_cuffie.html">cuffie</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>seguici sui social</h4>
+                    <div class="social-links">
+                        <a href="hp.html"><i class="fab fa-facebook-f"></i></a>
+                        <a href="hp.html"><i class="fab fa-twitter"></i></a>
+                        <a href="hp.html"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>

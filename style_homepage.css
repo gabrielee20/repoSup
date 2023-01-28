@@ -1,0 +1,80 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Raleway', sans-serif;
+}
+.header{
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4,9,30,0.7), rgba(4,9,30,0.7)),url(images/background.png);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+nav{
+    display: flex;
+    padding: 2% 6%;
+    justify-content: space-between;
+    align-items: center;
+}
+nav img{
+    width: 150px;
+}
+.nav-links{
+    flex: 1;
+    text-align: right;
+}
+.nav-links ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+}
+.nav-links ul li a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 22px;
+}
+/* Per aggiungere una linea quando si passa con il mouse sotto un menu */
+.nav-links ul li::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: red;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+.nav-links ul li:hover::after{
+    width: 100%;
+}
+
+.file-links{
+    flex: 1;
+    text-align: left;
+}
+.file-links ul li{
+    list-style: none;
+    margin-top: 10px;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+}
+.file-links ul li a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+}
+/* Per aggiungere una linea quando si passa con il mouse sotto un menu */
+.file-links ul li::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: rgb(238, 255, 0);
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+.file-links ul li:hover::after{
+    width: 100%;
+}

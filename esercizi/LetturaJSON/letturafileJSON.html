@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <title>Pagina View</title>
+
+<style>
+.nomiCampi {
+    font-size: 20px;
+    color: blue;
+}
+.valoriCampi {
+    
+    font-size: 17px;
+    color: black;
+}
+</style>
+
+</head>
+<body>
+<!-- Questi sono i campi a cui poi a fianco viene stampato il valore collegato grazie all'id, nello script avviene il parse del file JSON in cui ad ogni id associa il campo che scegliamo noi -->        
+        <div class="nomiCampi"> 
+            Nome: <span id="Nome" class="valoriCampi"></span> <br>
+            Cognome: <span id="Cognome" class="valoriCampi"></span> <br>
+            Data di nascita: <span id="DataDiNascita" class="valoriCampi"></span><br>
+            Nazionalità: <span id="Nazionalità" class="valoriCampi"></span><br>
+            NumeroTelefono: <span id="NumeroTelefono" class="valoriCampi"></span><br>
+            Email: <span id="Email" class="valoriCampi"></span><br>
+            Presentazione: <span id="Presentazione" class="valoriCampi"></span><br>
+
+        </div>
+</body>
+
+</html>
+<script>
+    function letturaFile(file) {
+        var request = new XMLHttpRequest();
+        request.open('GET', file, false);
+        request.send(null);
+        if (request.status == 200)
+            return request.responseText;
+    };
+
+    var StringJSON = letturaFile('cvitae_GabrieleGadaleta.json');
+    var parseJSON = JSON.parse(StringJSON);
+
+    document.getElementById("Nome").innerHTML = parseJSON.Nome;
+    document.getElementById("Cognome").innerHTML = parseJSON.Cognome;
+    document.getElementById("DataDiNascita").innerHTML = parseJSON.DataDiNascita;
+    document.getElementById("Nazionalità").innerHTML = parseJSON.Nazionalità;
+    document.getElementById("NumeroTelefono").innerHTML = parseJSON.NumeroTelefono;
+    document.getElementById("Email").innerHTML = parseJSON.Email;
+    document.getElementById("Presentazione").innerHTML = parseJSON.Presentazione;
+
+</script>
