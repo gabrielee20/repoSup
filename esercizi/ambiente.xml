@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="ambiente.xsl" type="text/xsl"?>
+<raccoltaDifferenziata> <!-- root -->
+    <cestino xmlns="cestinoRaccolta"> <!-- xmlns è la dichiarazione del namespace --> <!-- child -->
+        <tipo> <!-- subchild -->
+            Rifiuto Indifferenziato
+        </tipo>
+        <colore> <!-- subchild -->
+            Grigio
+        </colore>
+        <prodottoEsempio tipologia="utility"> <!-- subchild --> <!-- tipologia è un attributo -->
+            Pannolini
+        </prodottoEsempio>
+    </cestino>
+    <cestino> <!-- child -->
+        <tipo> <!-- subchild -->
+            Rifiuto Organico 
+        </tipo>
+        <colore> <!-- subchild -->
+            Marrone
+        </colore>
+        <prodottoEsempio tipologia="cibo"> <!-- subchild --> <!-- tipologia è un attributo -->
+            Buccia Mandarino
+        </prodottoEsempio>
+    </cestino>
+    <cestino> <!-- child -->
+        <tipo> <!-- subchild -->
+            Vetro 
+        </tipo>
+        <colore> <!-- subchild -->
+            Verde
+        </colore>
+        <prodottoEsempio tipologia="bevanda"> <!-- subchild --> <!-- tipologia è un attributo -->
+            Bottiglia Birra
+        </prodottoEsempio>
+    </cestino>
+    <cestino> <!-- child -->
+        <tipo> <!-- subchild -->
+            Carta 
+        </tipo>
+        <colore> <!-- subchild -->
+            Blu
+        </colore>
+        <prodottoEsempio tipologia="utility"> <!-- subchild --> <!-- tipologia è un attributo -->
+            Scatola Amazon
+        </prodottoEsempio>
+    </cestino>
+    <cestino> <!-- child -->
+        <tipo> <!-- subchild -->
+            Plastica 
+        </tipo>
+        <colore> <!-- subchild -->
+            Giallo
+        </colore>
+        <prodottoEsempio tipologia="cibo"> <!-- subchild --> <!-- tipologia è un attributo -->
+            Confezione Prosciutto
+        </prodottoEsempio>
+    </cestino>
+</raccoltaDifferenziata>
