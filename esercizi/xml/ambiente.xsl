@@ -4,15 +4,22 @@
     <xsl:template match="/raccoltaDifferenziata">
         <html>
             <body>
-                <xsl:for-each select="cestino">
-
-                    <xsl:value-of select="tipo" /> <br />
-                    <xsl:value-of select="colore" /> <br />
-                    <xsl:value-of select="prodottoEsempio" /> <br />
-
-                </xsl:for-each>
-            </body>
-        </html>
+                <table border="1">
+                 <tr>
+                  <th>Tipo Cestino</th>
+                  <th>Colore</th>
+                  <th>Prodotto di Esempio</th>
+                 </tr>
+                  <xsl:for-each select="cestino">
+                  <tr>
+                   <td><xsl:value-of select="tipo"/></td>
+                   <td><xsl:value-of select="colore"/></td>
+                   <td><xsl:value-of select="prodottoEsempio"/></td>
+                  </tr>
+               </xsl:for-each>
+               </table>
+               </body>
+                  </html>
 
     </xsl:template>
 
