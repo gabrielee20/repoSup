@@ -1,26 +1,53 @@
 <?xml version="1.0"?>
-<calciatore>
-  <nome>
-
-  </nome>
-  <cognome>
-
-  </cognome>
-  <dataNascita>
-
-  </dataNascita>
-  <luogoNascita>
-
-  </luogoNascita>
-  <abilità>
-    <piedePreferito>
-
-    </piedePreferito>
-    <ruolo>
-
-    </ruolo>
-    <anniEsperienza>
-      
-    </anniEsperienza>
-  </abilità>
+<listaCalciatori>
+  <calciatore>
+    <nome>
+      Cristiano
+    </nome>
+    <cognome>
+      Ronaldo
+    </cognome>
+    <dataNascita>
+      5 Febbraio 1985
+    </dataNascita>
+    <nazionalità>
+      Portogallo
+    </nazionalità>
+    <abilità>
+      <piedePreferito>
+        Destro
+      </piedePreferito>
+      <ruolo>
+        Attaccante
+      </ruolo>
+      <anniEsperienza>
+        16 anni
+      </anniEsperienza>
+    </abilità>
   </calciatore>
+  <calciatore>
+    <nome>
+      Lionel
+    </nome>
+    <cognome>
+      Messi
+    </cognome>
+    <dataNascita>
+      24 Giugno 1987
+    </dataNascita>
+    <nazionalità>
+      Argentina
+    </nazionalità>
+    <abilità>
+      <piedePreferito>
+        Sinistro
+      </piedePreferito>
+      <ruolo>
+        Attaccante
+      </ruolo>
+      <anniEsperienza>
+        13 anni
+      </anniEsperienza>
+    </abilità>
+  </calciatore>
+</listaCalciatori>
