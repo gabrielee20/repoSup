@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>Football News</title>
+    </head>
+
+    <style>
+    p {
+        position: absolute;
+        left: 90%;
+        transform: translate(-50%, -50%);
+    }
+
+    button {
+        position: absolute;
+        top: 10%;
+        left: 90%;
+        transform: translate(-50%, -50%);
+    }
+
+    .darkMode {
+        background-color: rgb(32, 32, 32);
+        color: white;
+    }
+
+    .lightMode {
+        background-color: white;
+        color: black;
+    }
+</style>
+    <body onload="carica()">
+        <div></div>
+        <button id="switch" onclick="cambia()">Imposta Dark Mode</button>
+        <script>
+        const div = document.querySelector('div');
+        const paragrafo = document.createElement('p');
+        const button = document.querySelector('button');
+        const body = document.querySelector('body');
+        var count;
+
+        function carica() {
+            count = 0;
+            cambia();
+        }
+
+        function cambia() {
+            if (count % 2 == 0) {
+                count++;
+                body.setAttribute('class', 'lightMode');
+                paragrafo.textContent = 'Light Mode Attiva';
+                button.textContent = 'Imposta Dark Mode';
+            } else {
+                body.setAttribute('class', 'darkMode');
+                paragrafo.textContent = 'Dark Mode Attiva';
+                button.textContent = 'Imposta Light Mode';
+                count++;
+            }
+
+        }        div.appendChild(paragrafo);
+
+                // Lettura file XML
+        document.addEventListener('DOMContentLoaded',() => {
+        let url = 'filexml.xml'
+        fetch(url).then(response=>response.text()).then(data=> {
+            let parser = new DOMParser()
+            let xml = parser.parseFromString(data, 'application/xml')
+            xmlContent = xml
+        })
+    })
+    </script>
+    </body>
+
+</html>
