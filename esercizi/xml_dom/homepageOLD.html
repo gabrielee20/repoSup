@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Football News</title>
+    <script>
+        // Lettura file XML
+        var docxml = new XMLHttpRequest();
+        docxml.onreadystatechange = function () {
+            if (this.readyState == 4 && this.status == 200) {
+            }
+
+        };
+        docxml.open("GET", "filexml.xml", true);
+        docxml.send();
+        var xmlDoc = docxml.responseXML;
+
+        // Aggiunta tabella
+        // Creare la tabella HTML
+        var table = document.createElement("table");
+        var row = table.insertRow();
+        var cell1 = row.insertCell();
+        var cell2 = row.insertCell();
+        cell1.innerHTML = "<b>Nome</b>";
+        cell2.innerHTML = "<b>Cognome</b>";
+
+        // Aggiungere le righe della tabella
+        var calciatore = xmlDoc.getElementsByTagName("listaCalciatori");
+        for (i = 0; i < calciatore.length; i++) {
+            row = table.insertRow();
+            cell1 = row.insertCell();
+            cell2 = row.insertCell();
+            cell1.innerHTML = calciatore[i].getElementsByTagName("NOME")[0].childNodes[0].nodeValue;
+            cell2.innerHTML = calciatore[i].getElementsByTagName("COGNOME")[0].childNodes[0].nodeValue;
+        }
+
+    </script>
+</head>
+<style>
+    p {
+        position: absolute;
+        left: 90%;
+        transform: translate(-50%, -50%);
+    }
+
+    button {
+        position: absolute;
+        top: 10%;
+        left: 90%;
+        transform: translate(-50%, -50%);
+    }
+
+    .darkMode {
+        background-color: rgb(32, 32, 32);
+        color: white;
+    }
+
+    .lightMode {
+        background-color: white;
+        color: black;
+    }
+</style>
+
+<body onload="carica()">
+    <div></div>
+    <button id="switch" onclick="cambia()">Imposta Dark Mode</button>
+
+    <script>
+        const div = document.querySelector('div');
+        const paragrafo = document.createElement('p');
+        const button = document.querySelector('button');
+        const body = document.querySelector('body');
+        var count;
+
+        function carica() {
+            count = 0;
+            cambia();
+        }
+
+        function cambia() {
+            if (count % 2 == 0) {
+                count++;
+                body.setAttribute('class', 'lightMode');
+                paragrafo.textContent = 'Light Mode Attiva';
+                button.textContent = 'Imposta Dark Mode';
+            } else {
+                body.setAttribute('class', 'darkMode');
+                paragrafo.textContent = 'Dark Mode Attiva';
+                button.textContent = 'Imposta Light Mode';
+                count++;
+            }
+
+        }
+        div.appendChild(paragrafo);
+        // Aggiungere la tabella HTML al documento
+        document.body.appendChild(table);
+
+
+    </script>
+</body>
+
+</html>

@@ -1,53 +1,35 @@
-<!DOCTYPE html>
 <html>
 
 <head>
-    <title>Football News</title>
-    <script>
-        // Lettura file XML
-        var docxml = new XMLHttpRequest();
-        docxml.onreadystatechange = function () {
-            if (this.readyState == 4 && this.status == 200) {
-            }
-
-        };
-        docxml.open("GET", "filexml.xml", true);
-        docxml.send();
-        var xmlDoc = docxml.responseXML;
-
-        // Aggiunta tabella
-        // Creare la tabella HTML
-        var table = document.createElement("table");
-        var row = table.insertRow();
-        var cell1 = row.insertCell();
-        var cell2 = row.insertCell();
-        cell1.innerHTML = "<b>Nome</b>";
-        cell2.innerHTML = "<b>Cognome</b>";
-
-        // Aggiungere le righe della tabella
-        var calciatore = xmlDoc.getElementsByTagName("listaCalciatori");
-        for (i = 0; i < calciatore.length; i++) {
-            row = table.insertRow();
-            cell1 = row.insertCell();
-            cell2 = row.insertCell();
-            cell1.innerHTML = calciatore[i].getElementsByTagName("NOME")[0].childNodes[0].nodeValue;
-            cell2.innerHTML = calciatore[i].getElementsByTagName("COGNOME")[0].childNodes[0].nodeValue;
-        }
-
-    </script>
+    <title>Prova</title>
 </head>
-<style>
-    p {
-        position: absolute;
-        left: 90%;
-        transform: translate(-50%, -50%);
-    }
+<script>
+    // Lettura file XML
+    document.addEventListener('DOMContentLoaded', () => {
+        let url = 'filexml.xml'
+        fetch(url).then(response => response.text()).then(data => {
+            let parser = new DOMParser()
+            let xml = parser.parseFromString(data, 'application/xml')
+            xmlContent = xml;
 
-    button {
+            var x = xmlContent.getElementsByTagName("dataNascita");
+            var txt = "";
+            var xLen = x.length;
+
+            for (i = 0; i < xLen; i++) {
+                txt += x[i].childNodes[0].nodeValue + " ";
+            }
+            document.getElementById("demo").innerHTML = txt;
+
+        })
+    })
+</script>
+
+<style>
+    img {
         position: absolute;
-        top: 10%;
-        left: 90%;
-        transform: translate(-50%, -50%);
+        right: 20px;
+        width: 6%;
     }
 
     .darkMode {
@@ -63,8 +45,10 @@
 
 <body onload="carica()">
     <div></div>
-    <button id="switch" onclick="cambia()">Imposta Dark Mode</button>
+    <img src="whiteBTN.png" onclick="cambia()" id="switchmode">
+    <p id="demo"></p>
 
+    <!--Script per switch light/dark mode-->
     <script>
         const div = document.querySelector('div');
         const paragrafo = document.createElement('p');
@@ -79,23 +63,16 @@
 
         function cambia() {
             if (count % 2 == 0) {
+                document.getElementById("switchmode").src = "darkBTN.png";
                 count++;
                 body.setAttribute('class', 'lightMode');
-                paragrafo.textContent = 'Light Mode Attiva';
-                button.textContent = 'Imposta Dark Mode';
             } else {
+                document.getElementById("switchmode").src = "whiteBTN.png";
                 body.setAttribute('class', 'darkMode');
-                paragrafo.textContent = 'Dark Mode Attiva';
-                button.textContent = 'Imposta Light Mode';
                 count++;
             }
-
         }
         div.appendChild(paragrafo);
-        // Aggiungere la tabella HTML al documento
-        document.body.appendChild(table);
-
-
     </script>
 </body>
 
