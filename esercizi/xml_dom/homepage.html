@@ -1,7 +1,7 @@
 <html>
 
 <head>
-    <title>Prova</title>
+    <title>Football's players</title>
 </head>
 <script>
     // Lettura file XML
@@ -12,15 +12,27 @@
             let xml = parser.parseFromString(data, 'application/xml')
             xmlContent = xml;
 
-            var x = xmlContent.getElementsByTagName("dataNascita");
-            var txt = "";
-            var xLen = x.length;
+            var lista = xmlContent.getElementsByTagName("calciatore"); // vettore con tutti i calciatori
+            var listaLength = lista.length; // lunghezza vettore
+            var tabella = document.createElement("table"); // con il DOM creo l'elemento tabella 
+            var riga = tabella.insertRow();
+            var cella1 = riga.insertCell();
+            var cella2 = riga.insertCell();
 
-            for (i = 0; i < xLen; i++) {
-                txt += x[i].childNodes[0].nodeValue + " ";
+
+            cella1.innerHTML = "<b>Nome</b>";
+            cella2.innerHTML = "<b>Cognome</b>";
+
+
+            for (y = 0; y < listaLength; y++) {
+                riga = tabella.insertRow();
+                cella1 = riga.insertCell();
+                cella2 = riga.insertCell();
+                cella1.innerHTML = lista[y].getElementsByTagName("nome")[0].childNodes[0].nodeValue + " ";
+                cella2.innerHTML = lista[y].getElementsByTagName("cognome")[0].childNodes[0].nodeValue + " ";
             }
-            document.getElementById("demo").innerHTML = txt;
-
+            tabella.style.backgroundColor = "yellow";
+            document.body.appendChild(tabella);
         })
     })
 </script>
@@ -46,7 +58,6 @@
 <body onload="carica()">
     <div></div>
     <img src="whiteBTN.png" onclick="cambia()" id="switchmode">
-    <p id="demo"></p>
 
     <!--Script per switch light/dark mode-->
     <script>
@@ -66,6 +77,7 @@
                 document.getElementById("switchmode").src = "darkBTN.png";
                 count++;
                 body.setAttribute('class', 'lightMode');
+                
             } else {
                 document.getElementById("switchmode").src = "whiteBTN.png";
                 body.setAttribute('class', 'darkMode');
