@@ -18,20 +18,42 @@
             var riga = tabella.insertRow();
             var cella1 = riga.insertCell();
             var cella2 = riga.insertCell();
+            var cella3 = riga.insertCell();
+            var cella4 = riga.insertCell();
+            var cella5 = riga.insertCell();
+            var cella6 = riga.insertCell();
 
 
             cella1.innerHTML = "<b>Nome</b>";
             cella2.innerHTML = "<b>Cognome</b>";
+            cella3.innerHTML = "<b>Data di Nascita</b>";
+            cella4.innerHTML = "<b>Nazionalità</b>";
+            cella5.innerHTML = "<b>Pirde</b>";
+            cella6.innerHTML = "<b>Ruolo</b>";
 
 
             for (y = 0; y < listaLength; y++) {
                 riga = tabella.insertRow();
                 cella1 = riga.insertCell();
                 cella2 = riga.insertCell();
+                cella3 = riga.insertCell();
+                cella4 = riga.insertCell();
+                cella5 = riga.insertCell();
+                cella6 = riga.insertCell();
+
+
                 cella1.innerHTML = lista[y].getElementsByTagName("nome")[0].childNodes[0].nodeValue + " ";
                 cella2.innerHTML = lista[y].getElementsByTagName("cognome")[0].childNodes[0].nodeValue + " ";
+                cella3.innerHTML = lista[y].getElementsByTagName("dataNascita")[0].childNodes[0].nodeValue + " ";
+                cella4.innerHTML = lista[y].getElementsByTagName("nazionalità")[0].childNodes[0].nodeValue + " ";
+                cella5.innerHTML = lista[y].getElementsByTagName("piedePreferito")[0].childNodes[0].nodeValue + " ";
+                cella6.innerHTML = lista[y].getElementsByTagName("ruolo")[0].childNodes[0].nodeValue + " ";
+
             }
-            tabella.style.backgroundColor = "yellow";
+            tabella.style.backgroundColor = "slategray";
+            tabella.style.color = "white";
+            tabella.style.fontFamily = "Arial";
+
             document.body.appendChild(tabella);
         })
     })
@@ -77,7 +99,7 @@
                 document.getElementById("switchmode").src = "darkBTN.png";
                 count++;
                 body.setAttribute('class', 'lightMode');
-                
+
             } else {
                 document.getElementById("switchmode").src = "whiteBTN.png";
                 body.setAttribute('class', 'darkMode');
