@@ -81,7 +81,6 @@
     <div></div>
     <img src="whiteBTN.png" onclick="cambia()" id="switchmode">
 
-    <!--Script per switch light/dark mode-->
     <script>
         const div = document.querySelector('div');
         const paragrafo = document.createElement('p');
@@ -89,6 +88,8 @@
         const body = document.querySelector('body');
         var count;
 
+
+        //script switch light/dark mode
         function carica() {
             count = 0;
             cambia();
@@ -106,17 +107,25 @@
                 count++;
             }
         }
+
+        //script aggiungi calciatore
+
+        function add(){
+            
+        }
+
         div.appendChild(paragrafo);
     </script>
 
     <form id="add">
-        <input type="text" id="nomeDaInserire">Inserisci un nome 
-        <input type="text" id="cognomeDaInserire"> <br>Inserisci un cognome 
-        <input type="text" id="dataNascitaDaInserire"> <br>Inserisci data di nascita 
-        <input type="text" id="nazionalitàDaInserire"> <br>Inserisci nazionalità 
-        <input type="text" id="piedeDaInserire"> <br>Inserisci piede preferito 
-        <input type="text" id="ruoloDaInserire"> <br>Inserisci ruolo 
-
+        <h3> Aggiungi un calciatore </h3>
+        Inserisci un nome <br> <input type="text" id="nomeDaInserire"> <br>
+        <br>Inserisci un cognome <br><input type="text" id="cognomeDaInserire"> <br>
+        <br>Inserisci data di nascita <br> <input type="text" id="dataNascitaDaInserire"> <br>
+        <br>Inserisci nazionalità <br> <input type="text" id="nazionalitàDaInserire"> <br>
+        <br>Inserisci piede preferito <br> <input type="text" id="piedeDaInserire"> <br>
+        <br>Inserisci ruolo <br> <input type="text" id="ruoloDaInserire"> <br><br>
+        <button onclick="add()">Aggiungi</button>
     </form>
 </body>
 
