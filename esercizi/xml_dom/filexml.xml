@@ -40,4 +40,84 @@
       Attaccante
     </ruolo>
   </calciatore>
+  <calciatore>
+    <nome>
+      Federico
+    </nome>
+    <cognome>
+      Chiesa
+    </cognome>
+    <dataNascita>
+      25 Ottobre 1997
+    </dataNascita>
+    <nazionalità>
+      Italiana
+    </nazionalità>
+    <piedePreferito>
+      Destro
+    </piedePreferito>
+    <ruolo>
+      Attaccante
+    </ruolo>
+  </calciatore>
+  <calciatore>
+    <nome>
+      Juan
+    </nome>
+    <cognome>
+      Cuadrado
+    </cognome>
+    <dataNascita>
+      26 Maggio 1988
+    </dataNascita>
+    <nazionalità>
+      Colombiana
+    </nazionalità>
+    <piedePreferito>
+      Destro
+    </piedePreferito>
+    <ruolo>
+      Centrocampista
+    </ruolo>
+  </calciatore>
+  <calciatore>
+    <nome>
+      Dusan
+    </nome>
+    <cognome>
+      Vlahovic
+    </cognome>
+    <dataNascita>
+      28 Gennaio 2000
+    </dataNascita>
+    <nazionalità>
+      Serba
+    </nazionalità>
+    <piedePreferito>
+      Sinistro
+    </piedePreferito>
+    <ruolo>
+      Attaccante
+    </ruolo>
+  </calciatore>
+  <calciatore>
+    <nome>
+      Paulo
+    </nome>
+    <cognome>
+      Dybala
+    </cognome>
+    <dataNascita>
+      15 Novembre 1993
+    </dataNascita>
+    <nazionalità>
+      Argentina
+    </nazionalità>
+    <piedePreferito>
+      Sinistro
+    </piedePreferito>
+    <ruolo>
+      Attaccante
+    </ruolo>
+  </calciatore>
 </listaCalciatori>
