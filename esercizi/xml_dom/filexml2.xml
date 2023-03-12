@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="filexml2.xsl" type="text/xsl"?>
+<listaCestisti>
+    <cestista>
+      <nome>
+        LeBron
+      </nome>
+      <cognome>
+        James
+      </cognome>
+      <dataNascita>
+        30 Dicembre 1984
+      </dataNascita>
+      <nazionalità>
+        Stati Uniti
+      </nazionalità>
+      <ruolo>
+        Playmaker
+      </ruolo>
+    </cestista>
+    <cestista>
+      <nome>
+        Michael
+      </nome>
+      <cognome>
+        Jordan
+      </cognome>
+      <dataNascita>
+        17 Febbraio 1963
+      </dataNascita>
+      <nazionalità>
+        America
+      </nazionalità>
+      <ruolo>
+        Guardia tiratrice
+      </ruolo>
+    </cestista>
+    <cestista>
+      <nome>
+        Kobe 
+      </nome>
+      <cognome>
+        Bryant
+      </cognome>
+      <dataNascita>
+        23 agosto 1978
+      </dataNascita>
+      <nazionalità>
+        New Yorkese
+      </nazionalità>
+      <ruolo>
+        Guardia
+      </ruolo>
+    </cestista>
+    <cestista>
+      <nome>
+        Larry
+      </nome>
+      <cognome>
+        Bird
+      </cognome>
+      <dataNascita>
+        7 Dicembre 1956
+      </dataNascita>
+      <nazionalità>
+        Stati Uniti
+      </nazionalità>
+      <ruolo>
+        Ala piccola
+      </ruolo>
+    </cestista>
+    <cestista>
+      <nome>
+        Magic
+      </nome>
+      <cognome>
+        Johnson
+      </cognome>
+      <dataNascita>
+        14 agosto 1959
+      </dataNascita>
+      <nazionalità>
+        Stati Uniti
+      </nazionalità>
+      <ruolo>
+        Playmaker
+      </ruolo>
+    </cestista>
+  </listaCestisti>

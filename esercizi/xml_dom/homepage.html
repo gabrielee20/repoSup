@@ -78,16 +78,13 @@
 </style>
 
 <body onload="carica()">
-    <div></div>
     <img src="whiteBTN.png" onclick="cambia()" id="switchmode">
 
     <script>
         const div = document.querySelector('div');
-        const paragrafo = document.createElement('p');
-        const button = document.querySelector('button');
+        var button = document.querySelector('button');
         const body = document.querySelector('body');
         var count;
-
 
         //script switch light/dark mode
         function carica() {
@@ -108,25 +105,38 @@
             }
         }
 
-        //script aggiungi calciatore
-
-        function add(){
-
+        function add() {
+            const paragrafo = document.createElement('p');
+            if (count < 2) {
+                var r = document.getElementById("testoDaInserire").value;
+                var testo = document.createTextNode(r);
+                paragrafo.appendChild(testo);
+                count++;
+            } else {
+                alert("bona quante volte lo vuoi aggiungere");
+            }
+            document.getElementById("testo").appendChild(paragrafo);
         }
 
-        div.appendChild(paragrafo);
+        function remove() {
+            document.getElementById("testoDaInserire").value = "";
+            var paragraph = document.getElementById("testo"); 
+            var parentElement = paragraph.parentNode; 
+            parentElement.removeChild(paragraph);
+            count = 1;  
+            document.getElementById("testo").appendChild(paragrafo);
+              
+        }
     </script>
+    <form>
+        Inserisci un testo da inserire nella pagina <br> <input type="text" id="testoDaInserire"><br>
+    </form>
+    <button onclick="add()">Aggiungi</button>
+    <button onclick="remove()">Elimina</button>
 
-<!--     <form id="add">
-        <h3> Aggiungi un calciatore </h3>
-        Inserisci un nome <br> <input type="text" id="nomeDaInserire"> <br>
-        <br>Inserisci un cognome <br><input type="text" id="cognomeDaInserire"> <br>
-        <br>Inserisci data di nascita <br> <input type="text" id="dataNascitaDaInserire"> <br>
-        <br>Inserisci nazionalità <br> <input type="text" id="nazionalitàDaInserire"> <br>
-        <br>Inserisci piede preferito <br> <input type="text" id="piedeDaInserire"> <br>
-        <br>Inserisci ruolo <br> <input type="text" id="ruoloDaInserire"> <br><br>
-        <button onclick="add()">Aggiungi</button>
-    </form> -->
+    <div id="testo"></div>
+
+    <p>Se vuoi vedere i cestisti più importanti clicca <a href="filexml2.xml">qui</a></p>
 </body>
 
 </html>
