@@ -84,7 +84,10 @@
         const div = document.querySelector('div');
         var button = document.querySelector('button');
         const body = document.querySelector('body');
-        var count;
+        const paragrafo = document.createElement('p');
+        var r;
+        var testo;
+
 
         //script switch light/dark mode
         function carica() {
@@ -106,26 +109,15 @@
         }
 
         function add() {
-            const paragrafo = document.createElement('p');
-            if (count < 2) {
-                var r = document.getElementById("testoDaInserire").value;
-                var testo = document.createTextNode(r);
-                paragrafo.appendChild(testo);
-                count++;
-            } else {
-                alert("bona quante volte lo vuoi aggiungere");
-            }
+            r = document.getElementById("testoDaInserire").value;
+            testo = document.createTextNode(r);
+            paragrafo.appendChild(testo);
             document.getElementById("testo").appendChild(paragrafo);
         }
 
         function remove() {
-            document.getElementById("testoDaInserire").value = "";
-            var paragraph = document.getElementById("testo"); 
-            var parentElement = paragraph.parentNode; 
-            parentElement.removeChild(paragraph);
-            count = 1;  
-            document.getElementById("testo").appendChild(paragrafo);
-              
+            document.getElementById("testoDaInserire").value = ""; // svuota il campo di input text
+            paragrafo.removeChild(testo);
         }
     </script>
     <form>
